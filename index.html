@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMA MODELS - Стань лицом нового поколения</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <h1>FORMA</h1>
+                <div class="loading-line"></div>
+                <h2>MODELS</h2>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-text" id="progressText">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>FORMA MODELS</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#models">Модели</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#casting">Кастинг</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-video">
+                <video autoplay muted loop playsinline>
+                    <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text" data-aos="fade-up" data-aos-duration="1500">
+                    <h1 class="hero-title">
+                        <span class="title-line">ТВОЙ ШАНС</span>
+                        <span class="title-line">В МОДЕЛИНГЕ</span>
+                    </h1>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                        Открой свой путь в мире высокой моды с ведущим модельным агентством
+                    </p>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                        <button class="btn btn-primary" onclick="scrollToSection('casting')">
+                            <span class="btn-text">Записаться на кастинг</span>
+                            <span class="btn-icon"><i class="fas fa-star"></i></span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('casting')">
+                            <span class="btn-text">Хочу быть моделью</span>
+                            <span class="btn-icon"><i class="fas fa-user"></i></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-stats" data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="150">0</span>
+                        <span class="stat-label">Моделей</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label">Контрактов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Лет опыта</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>О нас</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-duration="1000">
+                    <h3>Кто мы</h3>
+                    <p>FORMA MODELS — это премиальное модельное агентство, которое открывает двери в мир haute couture для исключительных талантов. Мы специализируемся на поиске и развитии уникальных лиц, создавая возможности для карьерного роста в индустрии люксовой моды.</p>
+                    <p>Наша миссия — помочь каждому таланту раскрыть свой потенциал и стать частью глобального fashion-сообщества. Мы работаем с ведущими брендами, фотографами и дизайнерами, обеспечивая нашим моделям доступ к самым престижным проектам.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-crown"></i>
+                            <span>Премиум подход</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Международное присутствие</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-star"></i>
+                            <span>Эксклюзивные контракты</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="FORMA MODELS Team">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-play"></i>
+                                <span>Смотреть видео</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Gallery Section -->
+    <section id="models" class="models">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Наши модели</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons" data-aos="fade-up" data-aos-delay="200">
+                <button class="filter-btn active" data-filter="all">
+                    <span>Все</span>
+                    <div class="btn-underline"></div>
+                </button>
+                <button class="filter-btn" data-filter="women">
+                    <span>Женщины</span>
+                    <div class="btn-underline"></div>
+                </button>
+                <button class="filter-btn" data-filter="men">
+                    <span>Мужчины</span>
+                    <div class="btn-underline"></div>
+                </button>
+            </div>
+
+            <!-- Models Grid -->
+            <div class="models-grid">
+                <!-- Women Models -->
+                <div class="model-card" data-category="women" data-aos="fade-up" data-aos-duration="800">
+                    <div class="model-image">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Анна Коткова">
+                        <div class="model-overlay">
+                            <div class="overlay-content">
+                                <div class="model-portfolio" onclick="openPortfolio('anna')">
+                                    <span>Портфолио</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Анна Коткова</h3>
+                        <p class="model-details">22 года • 175 см</p>
+                        <div class="model-tags">
+                            <span class="tag">Fashion</span>
+                            <span class="tag">Beauty</span>
+                            <span class="tag">Editorial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="model-card" data-category="women" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="model-image">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Мария Аванесянц">
+                        <div class="model-overlay">
+                            <div class="overlay-content">
+                                <div class="model-portfolio" onclick="openPortfolio('maria')">
+                                    <span>Портфолио</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Мария Аванесянц</h3>
+                        <p class="model-details">19 лет • 178 см</p>
+                        <div class="model-tags">
+                            <span class="tag">Editorial</span>
+                            <span class="tag">Runway</span>
+                            <span class="tag">Commercial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="model-card" data-category="women" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="model-image">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="София Козлова">
+                        <div class="model-overlay">
+                            <div class="overlay-content">
+                                <div class="model-portfolio" onclick="openPortfolio('sofia')">
+                                    <span>Портфолио</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>София Козлова</h3>
+                        <p class="model-details">21 год • 176 см</p>
+                        <div class="model-tags">
+                            <span class="tag">Beauty</span>
+                            <span class="tag">Commercial</span>
+                            <span class="tag">Runway</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Men Models -->
+                <div class="model-card" data-category="men" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="model-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Дмитрий Ефремов">
+                        <div class="model-overlay">
+                            <div class="overlay-content">
+                                <div class="model-portfolio" onclick="openPortfolio('dmitry')">
+                                    <span>Портфолио</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Дмитрий Ефремов</h3>
+                        <p class="model-details">25 лет • 188 см</p>
+                        <div class="model-tags">
+                            <span class="tag">Commercial</span>
+                            <span class="tag">Fashion</span>
+                            <span class="tag">Editorial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="model-card" data-category="men" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                    <div class="model-image">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Алексей Волков">
+                        <div class="model-overlay">
+                            <div class="overlay-content">
+                                <div class="model-portfolio" onclick="openPortfolio('alexey')">
+                                    <span>Портфолио</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Алексей Волков</h3>
+                        <p class="model-details">23 года • 185 см</p>
+                        <div class="model-tags">
+                            <span class="tag">Editorial</span>
+                            <span class="tag">Beauty</span>
+                            <span class="tag">Runway</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Faces -->
+                <div class="model-card" data-category="new" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="model-image">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Игорь Морозов">
+                        <div class="model-overlay">
+                            <div class="overlay-content">
+                                <div class="model-portfolio" onclick="openPortfolio('igor')">
+                                    <span>Портфолио</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Игорь Морозов</h3>
+                        <p class="model-details">20 лет • 182 см</p>
+                        <div class="model-tags">
+                            <span class="tag new-face">Новое лицо</span>
+                            <span class="tag">Fashion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Что мы делаем</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Представление моделей</h3>
+                    <p>Профессиональное представление талантов ведущим брендам, агентствам и дизайнерам. Мы обеспечиваем максимальную видимость наших моделей в индустрии.</p>
+                    <div class="service-features">
+                        <span>• Международные бренды</span>
+                        <span>• Эксклюзивные контракты</span>
+                        <span>• Персональный менеджмент</span>
+                    </div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Портфолио и съёмки</h3>
+                    <p>Создание профессионального портфолио с участием лучших фотографов и стилистов. Организация съёмок для fashion-журналов и рекламных кампаний.</p>
+                    <div class="service-features">
+                        <span>• Профессиональные фотографы</span>
+                        <span>• Fashion-журналы</span>
+                        <span>• Рекламные кампании</span>
+                    </div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Школа моделей</h3>
+                    <p>Комплексное обучение основам модельного бизнеса: дефиле, позирование, работа с камерой, этикет и профессиональное развитие.</p>
+                    <div class="service-features">
+                        <span>• Дефиле и позирование</span>
+                        <span>• Работа с камерой</span>
+                        <span>• Профессиональный этикет</span>
+                    </div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Международные контракты</h3>
+                    <p>Сотрудничество с ведущими международными агентствами и брендами. Помощь в получении контрактов за рубежом и развитие международной карьеры.</p>
+                    <div class="service-features">
+                        <span>• Европейские агентства</span>
+                        <span>• Азиатский рынок</span>
+                        <span>• Американские бренды</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casting Form Section -->
+    <section id="casting" class="casting">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Как попасть к нам</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="casting-content">
+                <div class="casting-info" data-aos="fade-right" data-aos-duration="1000">
+                    <h3>Стань частью FORMA MODELS</h3>
+                    <p>Заполните форму ниже, и мы свяжемся с вами для обсуждения возможностей сотрудничества. Мы ищем талантливых людей с уникальной внешностью и харизмой.</p>
+                    <div class="casting-requirements">
+                        <h4>Требования:</h4>
+                        <ul>
+                            <li>Возраст от 16 до 30 лет</li>
+                            <li>Рост для женщин: от 170 см</li>
+                            <li>Рост для мужчин: от 180 см</li>
+                            <li>Уникальная внешность</li>
+                            <li>Желание развиваться в модельном бизнесе</li>
+                        </ul>
+                    </div>
+                    <div class="casting-stats">
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Успешных кастингов</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24ч</span>
+                            <span class="stat-label">Ответ на заявку</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="casting-form" id="castingForm" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="form-group">
+                        <label for="name">Имя и Фамилия *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">Возраст *</label>
+                            <input type="number" id="age" name="age" min="16" max="30" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="height">Рост (см) *</label>
+                            <input type="number" id="height" name="height" min="150" max="220" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instagram">Instagram</label>
+                        <input type="text" id="instagram" name="instagram" placeholder="@username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Загрузка фотографий *</label>
+                        <div class="photo-upload-container">
+                            <div class="upload-area" id="uploadArea">
+                                <div class="upload-content">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <h4>Перетащите фото сюда</h4>
+                                    <p>или нажмите для выбора файлов</p>
+                                    <span class="upload-hint">Поддерживаются: JPG, PNG, HEIC (до 10MB)</span>
+                                </div>
+                                <input type="file" id="photoUpload" multiple accept="image/*" style="display: none;">
+                            </div>
+                            <div class="uploaded-photos" id="uploadedPhotos">
+                                <div class="photo-item" data-type="face">
+                                    <div class="photo-placeholder">
+                                        <i class="fas fa-user"></i>
+                                        <span>Фейс</span>
+                                    </div>
+                                </div>
+                                <div class="photo-item" data-type="profile">
+                                    <div class="photo-placeholder">
+                                        <i class="fas fa-user-circle"></i>
+                                        <span>Профиль</span>
+                                    </div>
+                                </div>
+                                <div class="photo-item" data-type="full">
+                                    <div class="photo-placeholder">
+                                        <i class="fas fa-user-friends"></i>
+                                        <span>Рост</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <span class="btn-text">Отправить заявку</span>
+                        <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        <div class="btn-loading" style="display: none;">
+                            <div class="spinner"></div>
+                        </div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Контакты</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item" data-aos="fade-up" data-aos-duration="800">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Адрес</h4>
+                            <p>ул. Тверская, 15<br>Москва, 125009</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Телефон</h4>
+                            <p>+7 (495) 123-45-67</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@formamodels.ru</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Режим работы</h4>
+                            <p>Пн-Пт: 10:00 - 19:00<br>Сб: 11:00 - 17:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <h4>Мы в социальных сетях</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>FORMA MODELS</h3>
+                    <p>Стань лицом нового поколения</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Агентство</h4>
+                        <ul>
+                            <li><a href="#about">О нас</a></li>
+                            <li><a href="#models">Модели</a></li>
+                            <li><a href="#services">Услуги</a></li>
+                            <li><a href="#casting">Кастинг</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Контакты</h4>
+                        <ul>
+                            <li><a href="#contact">Связаться с нами</a></li>
+                            <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+                            <li><a href="mailto:info@formamodels.ru">info@formamodels.ru</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FORMA MODELS. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+    <div id="portfolioModal" class="portfolio-modal">
+        <div class="portfolio-modal-content">
+            <span class="portfolio-close" onclick="closePortfolio()">&times;</span>
+            <div id="portfolioContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
