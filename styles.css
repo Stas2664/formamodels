@@ -2521,3 +2521,16 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
   100% { transform: translate(-50%, -50%) scale(1.2); }
 }
 /* --- END CUSTOM LUXURY CURSOR --- */ 
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 110px !important;
+    margin-bottom: 60px !important;
+  }
+  .stat-item {
+    margin-bottom: 60px !important;
+  }
+  section[id] {
+    scroll-margin-top: 110px;
+  }
+}
