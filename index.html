@@ -39,9 +39,15 @@
                     
                     <h2>FORMA MODELS</h2>
                 </div>
-                <!-- Удалено горизонтальное меню -->
+                <ul class="nav-menu desktop-menu">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#models">Модели</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#casting">Кастинг</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
                 <div class="hamburger" id="hamburger-menu">
-                    <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -49,7 +55,11 @@
             </div>
         </nav>
         <div class="mobile-nav" id="mobileNav">
-            <ul>
+            <div class="mobile-nav-header">
+                <span class="mobile-nav-title">Меню</span>
+                <span class="mobile-nav-close" id="mobileNavClose">&times;</span>
+            </div>
+            <ul class="mobile-nav-list">
                 <li><a href="#home">Главная</a></li>
                 <li><a href="#about">О нас</a></li>
                 <li><a href="#models">Модели</a></li>
@@ -57,7 +67,12 @@
                 <li><a href="#casting">Кастинг</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
+            <div class="mobile-nav-actions">
+                <a href="https://wa.me/79999999999" class="mobile-nav-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Написать в WhatsApp</a>
+                <a href="https://t.me/yourtelegram" class="mobile-nav-btn telegram" target="_blank"><i class="fab fa-telegram-plane"></i> Написать в Telegram</a>
+            </div>
         </div>
+        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
     </header>
 
     <!-- Hero Section -->
