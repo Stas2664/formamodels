@@ -2410,3 +2410,18 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
     display: none !important;
   }
 } 
+
+@media (max-width: 900px) {
+  header.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 1000;
+    width: 100vw;
+  }
+  body, .main, main, .container, section {
+    padding-top: 70px !important;
+  }
+} 
