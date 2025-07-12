@@ -2442,38 +2442,47 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
 } 
 
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 130px !important;
+    margin-bottom: 0 !important;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
   .hero-stats {
     flex-direction: column;
     align-items: center;
     gap: 1.2rem;
-    margin-top: 1.2rem;
-    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   .stat-item {
     min-width: 0;
     max-width: 100vw;
     width: 100%;
-    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
-    min-height: 90px;
+    padding: 1.1rem 0.5rem 1.1rem 0.5rem;
+    min-height: 70px;
+    margin-bottom: 0 !important;
     box-sizing: border-box;
     overflow: visible;
+    text-align: center;
   }
   .stat-number {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     line-height: 1.1;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
     word-break: break-word;
     overflow: visible;
-  }
-  .btn {
     text-align: center;
-    justify-content: center;
-    align-items: center;
   }
-  .btn-text {
-    width: 100%;
+  .stat-label {
+    font-size: 1rem;
     text-align: center;
-    display: block;
+  }
+  section[id] {
+    scroll-margin-top: 130px;
   }
 } 
 
