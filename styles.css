@@ -2535,3 +2535,81 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
     scroll-margin-top: 130px;
   }
 }
+
+/* --- Чистый мобильный hero-блок, исправляющий все ошибки --- */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 110px !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 8px !important;
+    gap: 0 !important;
+  }
+  .hero-title {
+    margin-top: 0 !important;
+    margin-bottom: 18px !important;
+    font-size: 2.1rem !important;
+    text-align: center !important;
+    line-height: 1.1 !important;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem !important;
+    margin-bottom: 18px !important;
+    text-align: center !important;
+  }
+  .hero-buttons {
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin: 0 0 18px 0 !important;
+    width: 100%;
+    align-items: center !important;
+  }
+  .btn {
+    width: 100% !important;
+    font-size: 1rem !important;
+    padding: 15px 0 !important;
+    border-radius: 30px !important;
+    justify-content: center !important;
+  }
+  .hero-stats {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100%;
+    margin: 0 !important;
+  }
+  .stat-item {
+    margin: 0 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    padding: 1rem 0.5rem !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(212,175,55,0.13);
+  }
+  .stat-number {
+    font-size: 2rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+  .stat-label {
+    font-size: 1rem !important;
+  }
+  .experience-block {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  section[id] {
+    scroll-margin-top: 110px !important;
+  }
+}
