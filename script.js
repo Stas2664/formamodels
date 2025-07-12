@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 loadingScreen.style.display = 'none';
             }, 600);
-        }, 400);
+        }, 1400);
     });
 });
 
@@ -73,6 +73,41 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     setTimeout(animateHeroCounters, 1200);
 });
+
+// --- COUNTERS (Casting) ---
+function animateCastingCounters() {
+    const counters = document.querySelectorAll('.casting-stat-number[data-count]');
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-count'));
+        let current = 0;
+        const increment = Math.max(1, Math.floor(target / 60));
+        function update() {
+            if (current < target) {
+                current += increment;
+                if (current > target) current = target;
+                counter.textContent = current + (target === 95 ? '%' : 'ч');
+                setTimeout(update, 18);
+            } else {
+                counter.textContent = target + (target === 95 ? '%' : 'ч');
+            }
+        }
+        update();
+    });
+}
+
+// Запуск анимации counters при появлении секции кастинга
+const castingSection = document.querySelector('.casting');
+if (castingSection) {
+    const castingObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCastingCounters();
+                castingObserver.unobserve(entry.target);
+            }
+        });
+    });
+    castingObserver.observe(castingSection);
+}
 
 // --- MOBILE NAV ---
 const hamburger = document.querySelector('.hamburger');
@@ -436,64 +471,4 @@ if (statsSection) {
     });
     
     statsObserver.observe(statsSection);
-} 
-
-function openPortfolio(model) {
-    const modal = document.getElementById('portfolioModal');
-    const content = document.getElementById('portfolioContent');
-    let html = '';
-    switch(model) {
-        case 'anna':
-            html = `<h2>Портфолио Анны Котковой</h2>
-                <img src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80' style='width:100%;max-width:350px;border-radius:16px;margin-bottom:1rem;'>
-                <p><b>Fashion, Beauty, Editorial.</b><br>Работала с Vogue, Harper’s Bazaar, участвовала в показах Mercedes-Benz Fashion Week. Съёмки для ведущих российских и европейских брендов.</p>`;
-            break;
-        case 'maria':
-            html = `<h2>Портфолио Марии Аванесянц</h2>
-                <img src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80' style='width:100%;max-width:350px;border-radius:16px;margin-bottom:1rem;'>
-                <p><b>Editorial, Runway, Commercial.</b><br>Победительница конкурса новых лиц, участница показов в Милане и Париже. Снималась для Elle, Cosmopolitan, Zara.</p>`;
-            break;
-        case 'sofia':
-            html = `<h2>Портфолио Софии Козловой</h2>
-                <img src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80' style='width:100%;max-width:350px;border-radius:16px;margin-bottom:1rem;'>
-                <p><b>Beauty, Commercial, Runway.</b><br>Лицо рекламных кампаний L’Oréal и Maybelline. Опыт работы с топовыми фотографами, публикации в Marie Claire.</p>`;
-            break;
-        case 'dmitry':
-            html = `<h2>Портфолио Дмитрия Ефремова</h2>
-                <img src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80' style='width:100%;max-width:350px;border-radius:16px;margin-bottom:1rem;'>
-                <p><b>Commercial, Fashion, Editorial.</b><br>Контракты с агентствами в Европе и Азии. Съёмки для Calvin Klein, Hugo Boss, участие в рекламных роликах.</p>`;
-            break;
-        case 'alexey':
-            html = `<h2>Портфолио Алексея Волкова</h2>
-                <img src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80' style='width:100%;max-width:350px;border-radius:16px;margin-bottom:1rem;'>
-                <p><b>Editorial, Beauty, Runway.</b><br>Постоянный участник fashion-показов в Москве и Санкт-Петербурге. Съёмки для Adidas, Puma, публикации в GQ.</p>`;
-            break;
-        case 'igor':
-            html = `<h2>Портфолио Игоря Морозова</h2>
-                <img src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80' style='width:100%;max-width:350px;border-radius:16px;margin-bottom:1rem;'>
-                <p><b>Новое лицо, Fashion.</b><br>Перспективный участник fashion-показов. Финалист кастинга FORMA MODELS, съёмки для молодежных брендов.</p>`;
-            break;
-        default:
-            html = '<p>Портфолио не найдено.</p>';
-    }
-    content.innerHTML = html;
-    const modalEl = document.getElementById('portfolioModal');
-    modalEl.classList.add('active');
-    document.body.classList.add('modal-open');
-    // Закрытие по клику вне окна
-    modalEl.onclick = function(e) {
-        if (e.target === modalEl) closePortfolio();
-    };
-    // Закрытие по Esc
-    document.onkeydown = function(e) {
-        if (e.key === 'Escape') closePortfolio();
-    };
-}
-window.openPortfolio = openPortfolio;
-
-function closePortfolio() {
-    const modal = document.getElementById('portfolioModal');
-    modal.classList.remove('active');
-    document.body.classList.remove('modal-open');
-    document.onkeydown = null;
 } 
