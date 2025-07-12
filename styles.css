@@ -2697,3 +2697,94 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
     scroll-margin-top: 80px !important;
   }
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 48px !important;
+    min-height: unset !important;
+    height: auto !important;
+    display: block !important;
+  }
+  .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 8px !important;
+    gap: 0 !important;
+    z-index: 3 !important;
+    position: relative !important;
+  }
+  .hero-title {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+    font-size: 2.1rem !important;
+    text-align: center !important;
+    line-height: 1.1 !important;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem !important;
+    margin-bottom: 12px !important;
+    text-align: center !important;
+  }
+  .hero-buttons {
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin: 0 0 12px 0 !important;
+    width: 100%;
+    align-items: center !important;
+  }
+  .btn {
+    width: 100% !important;
+    font-size: 1rem !important;
+    padding: 15px 0 !important;
+    border-radius: 30px !important;
+    justify-content: center !important;
+  }
+  .hero-stats {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100%;
+    margin: 0 !important;
+    z-index: 3 !important;
+    position: relative !important;
+  }
+  .stat-item {
+    margin: 0 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    padding: 1rem 0.5rem !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    background: rgba(0,0,0,0.7) !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(212,175,55,0.13) !important;
+    color: #fff !important;
+    position: relative !important;
+    z-index: 3 !important;
+    overflow: visible !important;
+  }
+  .stat-number {
+    font-size: 2rem !important;
+    margin-bottom: 0.2rem !important;
+    color: #d4af37 !important;
+  }
+  .stat-label {
+    font-size: 1rem !important;
+    color: #fff !important;
+  }
+  .experience-block {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    background: rgba(0,0,0,0.85) !important;
+    border: 1.5px solid #d4af37 !important;
+    color: #fff !important;
+    z-index: 3 !important;
+    overflow: visible !important;
+  }
+  section[id] {
+    scroll-margin-top: 48px !important;
+  }
+}
