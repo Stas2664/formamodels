@@ -2704,6 +2704,8 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
     min-height: unset !important;
     height: auto !important;
     display: block !important;
+    margin-bottom: 0 !important;
+    background: #000 !important;
   }
   .hero-content {
     display: flex !important;
@@ -2758,9 +2760,9 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
     padding: 1rem 0.5rem !important;
     box-sizing: border-box !important;
     text-align: center !important;
-    background: rgba(0,0,0,0.7) !important;
+    background: rgba(0,0,0,0.85) !important;
     border-radius: 16px !important;
-    border: 1px solid rgba(212,175,55,0.13) !important;
+    border: 1.5px solid #d4af37 !important;
     color: #fff !important;
     position: relative !important;
     z-index: 3 !important;
@@ -2778,11 +2780,6 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
   .experience-block {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
-    background: rgba(0,0,0,0.85) !important;
-    border: 1.5px solid #d4af37 !important;
-    color: #fff !important;
-    z-index: 3 !important;
-    overflow: visible !important;
   }
   section[id] {
     scroll-margin-top: 48px !important;
