@@ -126,29 +126,43 @@ if (hamburger && navMenu) {
 }
 
 // --- Бургер-меню для мобильных ---
-const hamburgerMobile = document.getElementById('hamburger-menu');
-const mobileNav = document.getElementById('mobileNav');
-const mobileNavOverlay = document.getElementById('mobileNavOverlay');
-const mobileNavClose = document.getElementById('mobileNavClose');
-function closeMobileMenu() {
-  mobileNav.classList.remove('open');
-  document.body.classList.remove('mobile-menu-open');
-  mobileNavOverlay.style.display = 'none';
-}
-hamburgerMobile.addEventListener('click', function() {
-  if (!mobileNav.classList.contains('open')) {
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburgerMobile = document.getElementById('hamburger-menu');
+  const mobileNav = document.getElementById('mobileNav');
+  const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+  const mobileNavClose = document.getElementById('mobileNavClose');
+  const mobileNavList = document.querySelector('.mobile-nav-list');
+
+  function closeMobileMenu() {
+    mobileNav.classList.remove('open');
+    document.body.classList.remove('mobile-menu-open');
+    mobileNavOverlay.style.display = 'none';
+    if (mobileNavList) mobileNavList.style.display = 'none';
+  }
+
+  function openMobileMenu() {
     mobileNav.classList.add('open');
     document.body.classList.add('mobile-menu-open');
     mobileNavOverlay.style.display = 'block';
-  } else {
-    closeMobileMenu();
+    if (mobileNavList) mobileNavList.style.display = 'flex';
   }
-});
-mobileNavOverlay.addEventListener('click', closeMobileMenu);
-mobileNavClose.addEventListener('click', closeMobileMenu);
-// Исправлено: теперь пункты меню всегда кликабельны и видны при открытом меню
-mobileNav.querySelectorAll('.mobile-nav-list a').forEach(link => {
-  link.addEventListener('click', closeMobileMenu);
+
+  if (hamburgerMobile && mobileNav && mobileNavOverlay && mobileNavClose && mobileNavList) {
+    hamburgerMobile.addEventListener('click', function() {
+      if (!mobileNav.classList.contains('open')) {
+        openMobileMenu();
+      } else {
+        closeMobileMenu();
+      }
+    });
+    mobileNavOverlay.addEventListener('click', closeMobileMenu);
+    mobileNavClose.addEventListener('click', closeMobileMenu);
+    mobileNavList.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+    // Скрываем меню по умолчанию
+    mobileNavList.style.display = 'none';
+  }
 });
 // --- END Бургер-меню ---
 
