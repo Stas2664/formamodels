@@ -2331,7 +2331,6 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
     flex-direction: column;
     gap: 2rem;
     opacity: 1 !important;
-    transition: opacity 0.3s;
     padding: 0 28px;
     margin: 32px 0 0 0;
     list-style: none;
