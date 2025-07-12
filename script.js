@@ -513,3 +513,56 @@ if (statsSection) {
     
     statsObserver.observe(statsSection);
 } 
+
+// --- LUXURY CUSTOM CURSOR ---
+(function() {
+  if (window.matchMedia('(pointer: coarse)').matches) return; // Не показывать на тач-устройствах
+  const inner = document.createElement('div');
+  inner.className = 'lux-cursor-inner';
+  const outer = document.createElement('div');
+  outer.className = 'lux-cursor-outer';
+  document.body.appendChild(outer);
+  document.body.appendChild(inner);
+  let mouseX = window.innerWidth/2, mouseY = window.innerHeight/2;
+  let outerX = mouseX, outerY = mouseY;
+  const delay = 0.10; // trail delay (сек)
+  function render() {
+    outerX += (mouseX - outerX) * delay;
+    outerY += (mouseY - outerY) * delay;
+    inner.style.left = mouseX + 'px';
+    inner.style.top = mouseY + 'px';
+    outer.style.left = outerX + 'px';
+    outer.style.top = outerY + 'px';
+    requestAnimationFrame(render);
+  }
+  render();
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+  // Hover-эффект для кликабельных
+  function setHover(state) {
+    if (state) {
+      document.body.classList.add('lux-cursor-hover');
+    } else {
+      document.body.classList.remove('lux-cursor-hover');
+    }
+  }
+  const hoverSelectors = 'a, button, .btn, input[type=submit], [role=button], label, .filter-btn';
+  document.addEventListener('mouseover', e => {
+    if (e.target.closest(hoverSelectors)) setHover(true);
+  });
+  document.addEventListener('mouseout', e => {
+    if (e.target.closest(hoverSelectors)) setHover(false);
+  });
+  // Скрывать кастомный курсор при уходе мыши
+  document.addEventListener('mouseleave', () => {
+    inner.style.opacity = '0';
+    outer.style.opacity = '0';
+  });
+  document.addEventListener('mouseenter', () => {
+    inner.style.opacity = '1';
+    outer.style.opacity = '1';
+  });
+})();
+// --- END LUXURY CUSTOM CURSOR --- 
