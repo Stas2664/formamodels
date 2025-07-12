@@ -125,6 +125,32 @@ if (hamburger && navMenu) {
     });
 }
 
+// --- Бургер-меню для мобильных ---
+const hamburgerMobile = document.getElementById('hamburger-menu');
+const mobileNav = document.getElementById('mobileNav');
+const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+const mobileNavClose = document.getElementById('mobileNavClose');
+function closeMobileMenu() {
+  mobileNav.classList.remove('open');
+  document.body.classList.remove('mobile-menu-open');
+  mobileNavOverlay.style.display = 'none';
+}
+hamburgerMobile.addEventListener('click', function() {
+  mobileNav.classList.toggle('open');
+  if (mobileNav.classList.contains('open')) {
+    document.body.classList.add('mobile-menu-open');
+    mobileNavOverlay.style.display = 'block';
+  } else {
+    closeMobileMenu();
+  }
+});
+mobileNavOverlay.addEventListener('click', closeMobileMenu);
+mobileNavClose.addEventListener('click', closeMobileMenu);
+mobileNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', closeMobileMenu);
+});
+// --- END Бургер-меню ---
+
 // --- SMOOTH SCROLL ---
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
