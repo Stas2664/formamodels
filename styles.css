@@ -321,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 768px) {
   .hero {
-    padding-top: 75px !important;
+    padding-top: 100px !important;
   }
 }
 
@@ -2457,5 +2457,15 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
     margin-bottom: 0.3rem;
     word-break: break-word;
     overflow: visible;
+  }
+  .btn {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-text {
+    width: 100%;
+    text-align: center;
+    display: block;
   }
 } 
