@@ -136,8 +136,8 @@ function closeMobileMenu() {
   mobileNavOverlay.style.display = 'none';
 }
 hamburgerMobile.addEventListener('click', function() {
-  mobileNav.classList.toggle('open');
-  if (mobileNav.classList.contains('open')) {
+  if (!mobileNav.classList.contains('open')) {
+    mobileNav.classList.add('open');
     document.body.classList.add('mobile-menu-open');
     mobileNavOverlay.style.display = 'block';
   } else {
@@ -146,7 +146,8 @@ hamburgerMobile.addEventListener('click', function() {
 });
 mobileNavOverlay.addEventListener('click', closeMobileMenu);
 mobileNavClose.addEventListener('click', closeMobileMenu);
-mobileNav.querySelectorAll('a').forEach(link => {
+// Исправлено: теперь пункты меню всегда кликабельны и видны при открытом меню
+mobileNav.querySelectorAll('.mobile-nav-list a').forEach(link => {
   link.addEventListener('click', closeMobileMenu);
 });
 // --- END Бургер-меню ---
