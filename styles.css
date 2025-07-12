@@ -1805,6 +1805,44 @@ section {
         font-size: 0.9rem;
         padding-top: 18px;
     }
+    .header {
+        width: 100vw;
+        min-width: 100vw;
+        overflow-x: hidden;
+    }
+    .navbar {
+        width: 100vw;
+        min-width: 100vw;
+        padding: 1rem 0.2rem;
+    }
+    .nav-container {
+        width: 100vw;
+        min-width: 100vw;
+        padding: 0 4px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-menu {
+        width: 100vw;
+        min-width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        justify-content: space-between;
+        font-size: 0.98rem;
+        overflow-x: auto;
+    }
+    .nav-menu li {
+        flex: 1 1 auto;
+        min-width: max-content;
+        text-align: center;
+    }
+    .nav-menu a {
+        font-size: 1rem;
+        padding: 0.5rem 0.2rem;
+    }
 }
 
 @media (max-width: 480px) {
