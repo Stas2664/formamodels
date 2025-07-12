@@ -8,11 +8,12 @@
 body {
     position: relative;
     z-index: 1;
-    background: linear-gradient(135deg, #181818 0%, #23243a 40%, #1a1a2e 80%, #23243a 100%);
+    background: linear-gradient(180deg, #181824 0%, #23243a 60%, #1a1a2e 100%) !important;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #f5f5f5;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 body::before, body::after, body .bg-glow1, body .bg-glow2, body .bg-glow3, body .bg-pattern {
@@ -41,14 +42,12 @@ body::before, body::after, body .bg-glow1, body .bg-glow2, body .bg-glow3, body 
 }
 body::before {
     content: '';
-    width: 700px;
-    height: 700px;
-    left: -200px;
-    top: 10vh;
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.22;
-    background: radial-gradient(circle, #d4af37 0%, transparent 70%);
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: url('noise.png') repeat;
+    opacity: 0.07;
 }
 body::after {
     content: '';
@@ -331,6 +330,10 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    will-change: transform;
 }
 
 .hero-background::after {
@@ -446,6 +449,10 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 2px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 0 24px 0 rgba(120, 0, 255, 0.13), 0 2px 24px 0 rgba(212, 175, 55, 0.08);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(8px);
+    background: rgba(30, 30, 40, 0.18);
 }
 
 .btn::before {
@@ -466,7 +473,10 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary {
     background: linear-gradient(135deg, #d4af37, #f4d03f);
     color: #000;
-    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 32px 0 rgba(212, 175, 55, 0.18), 0 2px 32px 0 rgba(120, 0, 255, 0.13);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(8px);
+    background: rgba(30, 30, 40, 0.18);
 }
 
 .btn-primary:hover {
